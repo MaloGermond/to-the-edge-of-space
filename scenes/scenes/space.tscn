@@ -13,6 +13,7 @@ tonemap_mode = 3
 environment = SubResource("Environment_1u805")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=332318635]
+position = Vector2(-98, 18)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-4, 1, 720, 0, 715, -424, -10, -424)
 
@@ -24,7 +25,7 @@ zoom = Vector2(2, 2)
 position = Vector2(17, -6)
 
 [node name="AnimatedSprite2D" parent="." unique_id=1444982781 instance=ExtResource("1_6tmeo")]
-position = Vector2(233, -189)
+position = Vector2(105, -215)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1107670196]
 position = Vector2(322, -93)

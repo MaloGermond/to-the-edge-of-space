@@ -37,6 +37,7 @@ metadata/_snap_enabled = true
 
 [node name="Node 2D" type="Node2D" unique_id=370988161]
 script = ExtResource("1_8dou5")
+angular_speed = 0.001
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=454257980]
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
