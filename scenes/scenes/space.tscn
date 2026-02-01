@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://caubgkbj0cnvn" path="res://scenes/objects/Earth.tscn" id="1_6tmeo"]
 [ext_resource type="PackedScene" uid="uid://dviradg8si4fs" path="res://scenes/objects/stars.tscn" id="2_1u805"]
+[ext_resource type="PackedScene" uid="uid://cwx2tbw8m0n2k" path="res://scenes/objects/ship.tscn" id="2_ri6ed"]
 
 [sub_resource type="Environment" id="Environment_1u805"]
 background_mode = 3
@@ -23,6 +24,10 @@ zoom = Vector2(2, 2)
 
 [node name="Stars" parent="Camera2D" unique_id=421848160 instance=ExtResource("2_1u805")]
 position = Vector2(17, -6)
+
+[node name="Ship" parent="Camera2D" unique_id=1429302862 instance=ExtResource("2_ri6ed")]
+position = Vector2(26, 58)
+scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" parent="." unique_id=1444982781 instance=ExtResource("1_6tmeo")]
 position = Vector2(105, -215)

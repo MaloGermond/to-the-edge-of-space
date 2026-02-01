@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cwx2tbw8m0n2k"]
+
+[ext_resource type="Texture2D" uid="uid://cyfe0u2dyoovm" path="res://assets/textures/body_01.png" id="1_a4j8e"]
+[ext_resource type="Script" uid="uid://cs6p47m0smosd" path="res://scripts/objects/ship_controls.gd" id="1_x2d0j"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x2d0j"]
+diffuse_texture = ExtResource("1_a4j8e")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4j8e"]
+radius = 25.0
+height = 136.0
+
+[node name="Ship" type="Node2D" unique_id=1429302862]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=131327344]
+floor_stop_on_slope = false
+floor_constant_speed = true
+floor_snap_length = 0.0
+script = ExtResource("1_x2d0j")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=256874516]
+self_modulate = Color(0.12408299, 0.12408296, 0.12408296, 1)
+texture = SubResource("CanvasTexture_x2d0j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=265008696]
+shape = SubResource("CapsuleShape2D_a4j8e")
