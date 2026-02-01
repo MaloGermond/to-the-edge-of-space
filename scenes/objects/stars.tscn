@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dviradg8si4fs"]
+
+[sub_resource type="Gradient" id="Gradient_04vqc"]
+offsets = PackedFloat32Array(0.090361446, 0.12349398)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_adasn"]
+frequency = 0.13
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bcr5m"]
+noise = SubResource("FastNoiseLite_adasn")
+color_ramp = SubResource("Gradient_04vqc")
+
+[node name="Stars" type="Node2D" unique_id=421848160]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=963530166]
+texture = SubResource("NoiseTexture2D_bcr5m")

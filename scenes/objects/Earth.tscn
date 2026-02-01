@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://caubgkbj0cnvn"]
+
+[ext_resource type="Script" uid="uid://bjbl8ipuy5xkk" path="res://scripts/objects/planets.gd" id="1_8dou5"]
+[ext_resource type="Texture2D" uid="uid://4ypnpbbpj7go" path="res://assets/textures/Pixel Planet Generator (2) copie.png" id="1_ru0v8"]
+[ext_resource type="Texture2D" uid="uid://c6iwort7ika1l" path="res://assets/textures/normal-map-sphere.jpg" id="2_8dou5"]
+
+[sub_resource type="Gradient" id="Gradient_b6hq4"]
+offsets = PackedFloat32Array(0.23192771, 0.8825301, 1)
+colors = PackedColorArray(0, 0.62352943, 1, 0, 0, 0.62352943, 1, 0.22352941, 0, 0.62352943, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ru0v8"]
+gradient = SubResource("Gradient_b6hq4")
+width = 256
+height = 256
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sc7ji"]
+diffuse_texture = ExtResource("1_ru0v8")
+normal_texture = ExtResource("2_8dou5")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vpcv"]
+radius = 61.0
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8dou5"]
+gradient = SubResource("Gradient_b6hq4")
+width = 256
+height = 256
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0.5)
+metadata/_snap_enabled = true
+
+[node name="Node 2D" type="Node2D" unique_id=370988161]
+script = ExtResource("1_8dou5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=454257980]
+self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+scale = Vector2(0.5703125, 0.57031256)
+texture = SubResource("GradientTexture2D_ru0v8")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=727268960]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=1539291877]
+self_modulate = Color(0.13501206, 0.13501206, 0.13501206, 1)
+texture = SubResource("CanvasTexture_sc7ji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=2002795272]
+visible = false
+shape = SubResource("CircleShape2D_8vpcv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="AnimatableBody2D" unique_id=1259652424]
+self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
+scale = Vector2(0.47656247, 0.47656256)
+texture = SubResource("GradientTexture2D_8dou5")
