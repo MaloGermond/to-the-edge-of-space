@@ -4,29 +4,27 @@
 [ext_resource type="PackedScene" uid="uid://dviradg8si4fs" path="res://scenes/objects/stars.tscn" id="2_1u805"]
 [ext_resource type="PackedScene" uid="uid://cwx2tbw8m0n2k" path="res://scenes/objects/ship.tscn" id="2_ri6ed"]
 
-[sub_resource type="Environment" id="Environment_1u805"]
-background_mode = 3
-tonemap_mode = 3
-
 [node name="Node2D" type="Node2D" unique_id=633932137]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1430522044]
-environment = SubResource("Environment_1u805")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=332318635]
 position = Vector2(-98, 18)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-4, 1, 720, 0, 715, -424, -10, -424)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1451091832]
-position = Vector2(251, -188)
-zoom = Vector2(2, 2)
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1881285666]
+repeat_size = Vector2(512, 512)
+repeat_times = 4
 
-[node name="Stars" parent="Camera2D" unique_id=421848160 instance=ExtResource("2_1u805")]
-position = Vector2(17, -6)
+[node name="Stars" parent="Parallax2D2" unique_id=421848160 instance=ExtResource("2_1u805")]
 
-[node name="Ship" parent="Camera2D" unique_id=1429302862 instance=ExtResource("2_ri6ed")]
-position = Vector2(26, 58)
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1141528415]
+scroll_scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(512, 512)
+repeat_times = 4
+
+[node name="Stars" parent="Parallax2D" unique_id=627582725 instance=ExtResource("2_1u805")]
+
+[node name="Ship" parent="." unique_id=1429302862 instance=ExtResource("2_ri6ed")]
 scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" parent="." unique_id=1444982781 instance=ExtResource("1_6tmeo")]
@@ -37,3 +35,5 @@ position = Vector2(322, -93)
 rotation = 2.4260077
 color = Color(0.99508184, 1, 0.85999525, 1)
 energy = 9.0
+
+[node name="Node" type="Node" parent="." unique_id=2122255386]

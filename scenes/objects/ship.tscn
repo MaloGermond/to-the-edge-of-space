@@ -18,6 +18,12 @@ floor_constant_speed = true
 floor_snap_length = 0.0
 script = ExtResource("1_x2d0j")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=579333600]
+position = Vector2(-1.1444092e-05, 5.0000114)
+scale = Vector2(4.9999995, 4.9999995)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=256874516]
 self_modulate = Color(0.12408299, 0.12408296, 0.12408296, 1)
 texture = SubResource("CanvasTexture_x2d0j")

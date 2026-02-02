@@ -25,7 +25,14 @@ func _physics_process(delta: float) -> void:
 		velocity_vector -= direction * acceleration * delta
 		velocity_vector = velocity_vector.limit_length(max_speed)
 
-	# Appliquer le mouvement (sans friction)
+
 	velocity = velocity_vector
 	rotation += rotation_vector
+	
+	if velocity.length() < acceleration/2:
+		velocity = Vector2.ZERO
+
+	# if rotation < rotation_speed/2:
+	# 	rotation = 0
+
 	move_and_slide()
