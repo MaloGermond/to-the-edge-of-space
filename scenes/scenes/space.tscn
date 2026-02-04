@@ -38,7 +38,8 @@ albedo_texture = ExtResource("4_w73ot")
 position = Vector2(322, -93)
 rotation = 2.4260077
 color = Color(0.99508184, 1, 0.85999525, 1)
-energy = 9.0
+energy = 10.57
+height = 0.42
 
 [node name="Node" type="Node" parent="." unique_id=2122255386]
 
