@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://caubgkbj0cnvn" path="res://scenes/objects/Earth.tscn" id="1_6tmeo"]
 [ext_resource type="PackedScene" uid="uid://dviradg8si4fs" path="res://scenes/objects/stars.tscn" id="2_1u805"]
 [ext_resource type="PackedScene" uid="uid://cwx2tbw8m0n2k" path="res://scenes/objects/ship.tscn" id="2_ri6ed"]
+[ext_resource type="Texture2D" uid="uid://dve33bkmqjbp0" path="res://assets/textures/Pixel Planet Generator (1) copie 2.png" id="4_w73ot"]
+[ext_resource type="Texture2D" uid="uid://b11ms8h6us1hy" path="res://assets/textures/Pixel Planet Generator (3).png" id="5_hb7dn"]
+[ext_resource type="Texture2D" uid="uid://neq5yc0jirwn" path="res://assets/textures/Pixel Planet Generator (6).png" id="6_ppeny"]
 
 [node name="Node2D" type="Node2D" unique_id=633932137]
 
@@ -29,6 +32,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="AnimatedSprite2D" parent="." unique_id=1444982781 instance=ExtResource("1_6tmeo")]
 position = Vector2(105, -215)
+albedo_texture = ExtResource("4_w73ot")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1107670196]
 position = Vector2(322, -93)
@@ -37,3 +41,17 @@ color = Color(0.99508184, 1, 0.85999525, 1)
 energy = 9.0
 
 [node name="Node" type="Node" parent="." unique_id=2122255386]
+
+[node name="Node 2D" parent="." unique_id=370988161 instance=ExtResource("1_6tmeo")]
+position = Vector2(797, -545)
+
+[node name="Node 2D4" parent="." unique_id=522030625 instance=ExtResource("1_6tmeo")]
+position = Vector2(797, -545)
+
+[node name="Node 2D2" parent="." unique_id=507142429 instance=ExtResource("1_6tmeo")]
+position = Vector2(893, 413)
+albedo_texture = ExtResource("5_hb7dn")
+
+[node name="Node 2D3" parent="." unique_id=825211867 instance=ExtResource("1_6tmeo")]
+position = Vector2(1155, -131)
+albedo_texture = ExtResource("6_ppeny")

@@ -35,18 +35,18 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 0.5)
 metadata/_snap_enabled = true
 
-[node name="Node 2D" type="Node2D" unique_id=370988161]
+[node name="Node 2D" type="Node2D" unique_id=370988161 node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_8dou5")
-angular_speed = 0.001
+sprite = NodePath("AnimatableBody2D/Sprite")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=454257980]
+[node name="Halo" type="Sprite2D" parent="." unique_id=454257980]
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
 scale = Vector2(0.5703125, 0.57031256)
 texture = SubResource("GradientTexture2D_ru0v8")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=727268960]
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=1539291877]
+[node name="Sprite" type="Sprite2D" parent="AnimatableBody2D" unique_id=1539291877]
 self_modulate = Color(0.13501206, 0.13501206, 0.13501206, 1)
 texture = SubResource("CanvasTexture_sc7ji")
 
@@ -54,7 +54,7 @@ texture = SubResource("CanvasTexture_sc7ji")
 visible = false
 shape = SubResource("CircleShape2D_8vpcv")
 
-[node name="Sprite2D2" type="Sprite2D" parent="AnimatableBody2D" unique_id=1259652424]
+[node name="Atmsosphere" type="Sprite2D" parent="AnimatableBody2D" unique_id=1259652424]
 self_modulate = Color(0.12225223, 0.12225223, 0.12225223, 1)
 scale = Vector2(0.47656247, 0.47656256)
 texture = SubResource("GradientTexture2D_8dou5")
