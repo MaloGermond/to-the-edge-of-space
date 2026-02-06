@@ -17,7 +17,7 @@ floor_stop_on_slope = false
 floor_constant_speed = true
 floor_snap_length = 0.0
 script = ExtResource("1_x2d0j")
-speed_line = NodePath("../Line2D")
+speed_line = NodePath("../Direction")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=579333600]
 position = Vector2(-1.1444092e-05, 5.0000114)
@@ -36,7 +36,7 @@ texture = SubResource("CanvasTexture_x2d0j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=265008696]
 shape = SubResource("CapsuleShape2D_a4j8e")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1852051457]
+[node name="Direction" type="Line2D" parent="." unique_id=1852051457]
 points = PackedVector2Array(0, 0, 71, -178)
 width = 3.0
 default_color = Color(0, 0.6156863, 0, 1)
