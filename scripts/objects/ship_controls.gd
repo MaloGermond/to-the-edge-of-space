@@ -3,11 +3,13 @@ extends CharacterBody2D
 @export var rotation_speed: float = 0.2  # Vitesse de rotation (radians/seconde)
 @export var acceleration: float = 20.0  # Accélération (pixels/seconde²)
 @export var max_speed: float = 500.0     # Vitesse maximale
+@export var speed_line: Line2D
 
 var velocity_vector: Vector2 = Vector2.ZERO
 var rotation_vector: float = 0
 
 func _physics_process(delta: float) -> void:
+	handleSpeedVector()
 	# Rotation (gauche/droite)
 	if Input.is_action_pressed("ui_left"):
 		rotation_vector -= rotation_speed * delta  # Sens horaire
@@ -36,3 +38,9 @@ func _physics_process(delta: float) -> void:
 	# 	rotation = 0
 
 	move_and_slide()
+
+
+func handleSpeedVector():
+	print(velocity)
+	var points = [position,position+velocity]
+	speed_line.points = points
