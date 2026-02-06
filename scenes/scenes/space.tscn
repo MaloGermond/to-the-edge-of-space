@@ -9,23 +9,32 @@
 
 [node name="Node2D" type="Node2D" unique_id=633932137]
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=332318635]
-position = Vector2(-98, 18)
+[node name="Node2D" type="Node2D" parent="." unique_id=430331062]
+z_index = -4096
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node2D" unique_id=677514246]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(590, 330)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/Parallax2D3" unique_id=1781085325]
+offset_left = -312.0
+offset_top = -190.0
+offset_right = 309.0
+offset_bottom = 179.0
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-4, 1, 720, 0, 715, -424, -10, -424)
 
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1881285666]
-repeat_size = Vector2(512, 512)
-repeat_times = 4
-
-[node name="Stars" parent="Parallax2D2" unique_id=421848160 instance=ExtResource("2_1u805")]
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1141528415]
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=1141528415]
 scroll_scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(512, 512)
 repeat_times = 4
 
-[node name="Stars" parent="Parallax2D" unique_id=627582725 instance=ExtResource("2_1u805")]
+[node name="Stars" parent="Node2D/Parallax2D" unique_id=627582725 instance=ExtResource("2_1u805")]
+
+[node name="Parallax2D2" type="Parallax2D" parent="Node2D" unique_id=1881285666]
+repeat_size = Vector2(512, 512)
+repeat_times = 4
+
+[node name="Stars" parent="Node2D/Parallax2D2" unique_id=421848160 instance=ExtResource("2_1u805")]
 
 [node name="Ship" parent="." unique_id=1429302862 instance=ExtResource("2_ri6ed")]
 scale = Vector2(0.2, 0.2)
